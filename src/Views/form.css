@@ -1,0 +1,48 @@
+form span {
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+
+input:invalid[focused="true"]~span {
+  display: block;
+}
+
+input:invalid[focused="true"] {
+  border: red 1px solid;
+}
+
+form {
+  margin: 30px 15px;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #FFFFFF;
+  padding: 20px;
+  width: 50%;
+  justify-content: space-between;
+  border: #E8EDF3 2px solid;
+}
+
+.input-pair {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
+}
+
+.input-pair button {
+  margin-top: 24px;
+}
+
+label {
+  font-weight: 400;
+  color: grey;
+}
+
+input,
+textarea {
+  border: #EEF3FB 1px solid;
+  border-radius: 3px;
+  padding: 5px;
+}

@@ -1,0 +1,111 @@
+table {
+    width: 90%;
+    margin: 30px;
+    margin-top: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-collapse: separate;
+    border-spacing: 0px 15px;
+    table-layout: fixed;
+    word-wrap: break-word;
+    overflow-y: scroll;
+}
+
+
+
+td {
+    padding: 20px 5px 20px 20px;
+    margin-bottom: 10px;
+}
+
+th {
+    padding: 10px 5px 20px 20px;
+    margin-bottom: 10px;
+}
+
+td svg:hover {
+    /* color: #5851D9; */
+    color: red;
+}
+
+tr {
+    margin: 5px 0px;
+    width: 80%;
+    background-color: white;
+    transition: background-color .2s ease-in;
+}
+
+thead tr {
+    background-color: inherit;
+    position: sticky;
+}
+
+tbody tr:hover {
+    background-color: #5851d93d;
+    color: black;
+    cursor: pointer;
+}
+
+.search-bar {
+    width: 100%;
+    color: black;
+    box-sizing: border-box;
+    padding-left: 10px;
+    border: #EEF3FB 1px solid;
+    border-radius: 4px;
+    font-size: larger;
+}
+
+.table-search {
+    display: inline-flex;
+    width: 90%;
+    margin: 10px 30px;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.table-search input {
+    background: no-repeat scroll 7px 7px;
+    padding-left: 30px;
+}
+
+.table-search i {
+    margin-right: -25px;
+    color: gray;
+}
+
+.fixed-table {
+    padding: 0px;
+    height: 100%;
+    margin: 0px;
+    width: auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page {
+    font-size: 2em;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page svg:hover {
+    color: #5851D9;
+    cursor: pointer;
+}
+
+.Issued {
+    background-color: #F7EDCB;
+    padding: 5px;
+    color: #8B8693;
+}
+
+.Paid {
+    background-color: #DFF9FB;
+    padding: 5px;
+    color: #8B8693;
+}

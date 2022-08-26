@@ -1,0 +1,159 @@
+.select-customer {
+  background-color: white;
+  width: max-content;
+  border: #EEF3FB 1px solid;
+  min-width: 250px;
+  height: 100px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+.bill-to-body {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: small;
+  align-items: center;
+}
+
+.bill-to-body p {
+  margin: 0px;
+}
+
+.bill-to-body button {
+  background-color: transparent;
+  color: #5851D9;
+}
+
+.bill-head {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.date-area {
+  display: flex;
+}
+
+.date-area input {
+  border: #EEF3FB 1px solid;
+}
+
+.item-list {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.list-header {
+  display: flex;
+  background-color: white;
+  border: #EEF3FB 1px solid;
+  color: grey
+}
+
+.list-header h5 {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+
+
+.list-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  border: #EEF3FB 1px solid;
+  padding: 3px 0px;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+.item-row p {
+  padding: 0px 10px 0px 10px;
+  margin: 10px 0px;
+}
+
+.item-row svg {
+  font-size: 1.5em;
+}
+
+.item-row svg:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.add-item {
+  margin: 10px 0px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.add-item:hover {
+  cursor: pointer;
+  color: #5851D9
+}
+
+.bill-foot {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.brief {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 7px;
+  width: 30%;
+}
+
+.total {
+  border-top: gray 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brief-item span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notes {
+  width: 30%;
+  width: min-content;
+}
+
+.sno {
+  width: 5%;
+}
+
+.items {
+  width: 45%;
+}
+
+.oe {
+  width: 15%;
+}
+
+.oe input {
+  width: 60%;
+  margin: 0px 20px 0px 10px;
+}
