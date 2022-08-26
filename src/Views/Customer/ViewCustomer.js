@@ -16,6 +16,7 @@ const ViewCustomer = () => {
     useEffect(() => {
         getData()
     }, []);
+
     return (
         <div className="view-customer">
             <div className="info-head">

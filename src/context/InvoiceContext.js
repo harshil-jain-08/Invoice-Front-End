@@ -1,6 +1,5 @@
-import React, { createContext, useState, useRef, useContext } from "react";
+import React, { createContext, useState, useRef } from "react";
 import { addInvoiceAPI, EditInvoiceAPI, getInvoiceByIdAPI } from "../API";
-import { AppContext } from "./AppContext";
 
 export const InvoiceContext = createContext();
 export const InvoiceProvider = (props) => {
