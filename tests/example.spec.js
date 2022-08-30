@@ -3,10 +3,11 @@ import { test, expect } from '@playwright/test';
 import { itemsGetAfterCreateNewItem, itemsGetBeforeCreateNewItem, itemsPostSuccess } from './apiCalls';
 import { itemsAfterCreateNewItem, itemsBeforeCreateNewItem, itemToAdd } from './itemMockData';
 
+const URLaddress = "http://localhost:3000"
 test.describe("items test", () => {
   test("successful item post", async ({ page }) => {
     await itemsGetBeforeCreateNewItem(page);
-    await page.goto("http://localhost:3000/items/");
+    await page.goto(`${URLaddress}/items`);
 
     await page.locator("tr").first().waitFor();
     expect(await page.locator("tr").count()).toEqual(
