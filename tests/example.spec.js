@@ -17,7 +17,6 @@ test.describe("items test", () => {
   test("successful item post", async ({ page }) => {
     await itemsGetBeforeCreateNewItem(page);
     await page.goto(`${URLaddress}/items`);
-    await itemsGetBeforeCreateNewItem(page);
     // await page.locator("text=dsfasd").isVisible();
     // expect(await page.locator("tr").count()).toEqual(
     //   itemsBeforeCreateNewItem.length + 1

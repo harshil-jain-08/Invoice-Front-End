@@ -10,6 +10,7 @@ export const itemsGetBeforeCreateNewItem = (page) =>
       status: 200,
       body: JSON.stringify(itemsBeforeCreateNewItem),
     });
+    console.log("aa");
   });
 
 export const itemsPostSuccess = (page) =>
