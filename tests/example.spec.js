@@ -3,13 +3,15 @@ import { test, expect } from '@playwright/test';
 import { itemsGetAfterCreateNewItem, itemsGetBeforeCreateNewItem, itemsPostSuccess } from './apiCalls';
 import { itemsAfterCreateNewItem, itemsBeforeCreateNewItem, itemToAdd } from './itemMockData';
 
-const URLaddress = "https://metsys-invoice.netlify.app/"
+
+const URLaddress = "https://metsys-invoice.netlify.app"
+
 test.describe("items test", () => {
   test("successful item post", async ({ page }) => {
     await itemsGetBeforeCreateNewItem(page);
     await page.goto(`${URLaddress}/items`);
 
-    await page.locator("tr").first().waitFor();
+    await page.locator("input").waitFor();
     expect(await page.locator("tr").count()).toEqual(
       itemsBeforeCreateNewItem.length + 1
     );
