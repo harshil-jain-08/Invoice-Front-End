@@ -11,7 +11,7 @@ test.describe("items test", () => {
     await itemsGetBeforeCreateNewItem(page);
     await page.goto(`${URLaddress}/items`);
 
-    await page.locator("input").waitFor();
+    await page.locator("input").click();
     expect(await page.locator("tr").count()).toEqual(
       itemsBeforeCreateNewItem.length + 1
     );
