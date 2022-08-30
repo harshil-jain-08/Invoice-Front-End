@@ -18,7 +18,7 @@ test.describe("items test", () => {
     await itemsGetBeforeCreateNewItem(page);
     await page.goto(`${URLaddress}/items`);
 
-    await page.locator('[placeholder="Search"]').click();
+    await page.locator("text=dsfasd").isVisible();
     expect(await page.locator("tr").count()).toEqual(
       itemsBeforeCreateNewItem.length + 1
     );
