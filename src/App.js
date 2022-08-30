@@ -15,38 +15,41 @@ import ViewInvoices from "./Views/Invoice/ViewInvoices";
 import InvoiceForm from "./Views/Invoice/InvoiceForm";
 import { InvoiceProvider } from "./context/InvoiceContext";
 
-
 function App() {
   return (
     <AppProvider>
       <InvoiceProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<SharedContent />} >
+            <Route path="/" element={<SharedContent />}>
               <Route index element={<Home />} />
 
-              <Route path="customer" element={<Outlet />} >
+              <Route path="customer" element={<Outlet />}>
                 <Route index element={<ViewCustomer />} />
                 <Route path="add" element={<AddCustomer />} />
-                <Route path="edit/:id" element={
-                  <ProtectedRoute from="customer">
-                    <EditCustomer />
-                  </ProtectedRoute>
-                }
+                <Route
+                  path="edit/:id"
+                  element={
+                    <ProtectedRoute from="customer">
+                      <EditCustomer />
+                    </ProtectedRoute>
+                  }
                 />
               </Route>
 
-              <Route path="items" element={<Outlet />} >
+              <Route path="items" element={<Outlet />}>
                 <Route index element={<ViewItems />} />
                 <Route path="add" element={<AddItems />} />
-                <Route path="edit/:id" element={
-                  <ProtectedRoute from="items">
-                    <EditItem />
-                  </ProtectedRoute>
-                }
+                <Route
+                  path="edit/:id"
+                  element={
+                    <ProtectedRoute from="items">
+                      <EditItem />
+                    </ProtectedRoute>
+                  }
                 />
               </Route>
-              <Route path="invoice" element={<Outlet />} >
+              <Route path="invoice" element={<Outlet />}>
                 <Route index element={<ViewInvoices />} />
                 <Route path="add" element={<InvoiceForm />} />
               </Route>
@@ -56,7 +59,7 @@ function App() {
         </BrowserRouter>
       </InvoiceProvider>
     </AppProvider>
-  )
+  );
 }
 
 export default App;

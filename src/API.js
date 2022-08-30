@@ -1,14 +1,12 @@
-import axios from 'axios'
-
+import axios from "axios";
 
 const client = axios.create({
-  baseURL: "http://localhost:8080/Home"
-})
-
+  baseURL: "http://localhost:8080/Home",
+});
 
 export async function getItemsAPI() {
-  const response = await client.get("/items").catch()
-  return response.data
+  const response = await client.get("/items").catch();
+  return response.data;
 }
 
 export async function addItemAPI(item) {
@@ -16,8 +14,8 @@ export async function addItemAPI(item) {
 }
 
 export async function getCustomersAPI() {
-  const response = await client.get("/customers").catch()
-  return response.data
+  const response = await client.get("/customers").catch();
+  return response.data;
 }
 
 export async function addCustomerAPI(customer) {
@@ -33,8 +31,8 @@ export async function EditCustomerAPI(customer) {
 }
 
 export async function getInvoicesAPI() {
-  const response = await client.get("/invoices").catch()
-  return response.data
+  const response = await client.get("/invoices").catch();
+  return response.data;
 }
 
 export async function addInvoiceAPI(invoice) {
@@ -46,6 +44,6 @@ export async function EditInvoiceAPI(invoice) {
 }
 
 export async function getInvoiceByIdAPI(id) {
-  const response = await client.get(`/invoice/edit/${id}`).catch()
-  return response.data
+  const response = await client.get(`/invoice/edit/${id}`).catch();
+  return response.data;
 }

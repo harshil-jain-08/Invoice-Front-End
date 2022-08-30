@@ -8,16 +8,16 @@ export const InvoiceProvider = (props) => {
   const dueDateRef = useRef();
   const notesRef = useRef();
   const refNo = useRef();
-  const [show, setShow] = useState(0)
+  const [show, setShow] = useState(0);
   const [itemList, setItemList] = useState([]);
   // const { invoices } = useContext(AppContext)
 
-
   const list = itemList.map((val) => {
-    return ({
-      item_id: val.id, item_quantity: val.quantity
-    })
-  })
+    return {
+      item_id: val.id,
+      item_quantity: val.quantity,
+    };
+  });
 
   const saveInvoice = () => {
     var data = {
@@ -27,28 +27,36 @@ export const InvoiceProvider = (props) => {
       customer_id: billTo.id,
       invoice_items: list,
       notes: notesRef.current.value,
-    }
+    };
     addInvoiceAPI(data);
     setBillTo();
     setItemList([]);
-  }
+  };
 
   const changeStat = async (idx, amount) => {
-    let pre = await getInvoiceByIdAPI(idx)
+    let pre = await getInvoiceByIdAPI(idx);
     if (pre["paid_status"] === "Issued") {
-      if (window.confirm(`Recieve payment for invoice Id:${pre.id} for amount ${amount}?`) === true) {
-        pre["amount"] = amount; pre["paid_status"] = "Paid";
+      if (
+        window.confirm(
+          `Recieve payment for invoice Id:${pre.id} for amount ${amount}?`
+        ) === true
+      ) {
+        pre["amount"] = amount;
+        pre["paid_status"] = "Paid";
         EditInvoiceAPI(pre);
       }
     } else {
-      if (window.confirm(`Change payment for invoice Id:${pre.id} to Issued?`) === true) {
-        pre["amount"] = amount; pre["paid_status"] = "Issued"; pre["due"] = amount;
+      if (
+        window.confirm(`Change payment for invoice Id:${pre.id} to Issued?`) ===
+        true
+      ) {
+        pre["amount"] = amount;
+        pre["paid_status"] = "Issued";
+        pre["due"] = amount;
         EditInvoiceAPI(pre);
       }
     }
-  }
-
-
+  };
 
   return (
     <InvoiceContext.Provider
@@ -65,8 +73,9 @@ export const InvoiceProvider = (props) => {
         setItemList,
         saveInvoice,
         changeStat,
-      }}>
+      }}
+    >
       {props.children}
-    </InvoiceContext.Provider >
+    </InvoiceContext.Provider>
   );
 };

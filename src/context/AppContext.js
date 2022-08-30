@@ -4,7 +4,7 @@ const initialState = {
   customers: [],
   items: [],
   invoices: [],
-}
+};
 
 export const AppContext = createContext();
 
@@ -15,21 +15,21 @@ export const AppProvider = (props) => {
     setState({
       ...state,
       items: items,
-    })
-  }
+    });
+  };
 
   const setCustomers = (customers) => {
     setState({
       ...state,
       customers: customers,
-    })
-  }
+    });
+  };
   const setInvoices = (invoices) => {
     setState({
       ...state,
       invoices: invoices,
-    })
-  }
+    });
+  };
 
   return (
     <AppContext.Provider
@@ -40,8 +40,9 @@ export const AppProvider = (props) => {
         setItems,
         setCustomers,
         setInvoices,
-      }}>
+      }}
+    >
       {props.children}
-    </AppContext.Provider >
+    </AppContext.Provider>
   );
 };
