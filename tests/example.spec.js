@@ -18,7 +18,11 @@ test.describe("items test", () => {
     await itemsGetBeforeCreateNewItem(page);
     await page.goto(`${URLaddress}/items`);
 
-    await page.locator("text=dsfasd").isVisible();
+    // await page.locator("text=dsfasd").isVisible();
+    // expect(await page.locator("tr").count()).toEqual(
+    //   itemsBeforeCreateNewItem.length + 1
+    // );
+    await expect(page.locator(`text=nnnkm`)).toHaveText(`nnnkm`);
     expect(await page.locator("tr").count()).toEqual(
       itemsBeforeCreateNewItem.length + 1
     );
