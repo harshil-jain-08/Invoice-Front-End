@@ -36,7 +36,7 @@ const filledData = rest.get(
 const getData = rest.post(
   "http://localhost:8080/Home/customer",
   (req, res, ctx) => {
-    const data = req.json();
+    return res();
     //console.log(data);
   }
 );
