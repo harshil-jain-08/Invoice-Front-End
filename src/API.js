@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://metsys-invoice.netlify.app/Home",
+  baseURL: "http://localhost:8081/Home",
 });
 
 export async function getItemsAPI() {

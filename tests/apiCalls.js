@@ -14,7 +14,7 @@ export const itemsGetBeforeCreateNewItem = (page) =>
   });
 
 export const itemsPostSuccess = (page) =>
-  page.route("https://metsys-invoice.netlify.app/Home/item", (route) => {
+  page.route("http://localhost:8081/Home/item", (route) => {
     route.fulfill({
       status: 200,
       body: JSON.stringify(itemToAdd),
@@ -22,7 +22,7 @@ export const itemsPostSuccess = (page) =>
   });
 
 export const itemsPostFailure = (page) =>
-  page.route("https://metsys-invoice.netlify.app/Home/item", (route) => {
+  page.route("http://localhost:8081/Home/item", (route) => {
     route.fulfill({
       status: 400,
       body: JSON.stringify("error"),
@@ -30,7 +30,7 @@ export const itemsPostFailure = (page) =>
   });
 
 export const itemsGetAfterCreateNewItem = (page) =>
-  page.route("https://metsys-invoice.netlify.app/Home/items", (route) => {
+  page.route("http://localhost:8081/Home/items", (route) => {
     route.fulfill({
       status: 200,
       body: JSON.stringify(itemsAfterCreateNewItem),
