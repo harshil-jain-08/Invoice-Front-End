@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "http://localhost:8081/Home",
+  baseURL: "http://localhost:8080/Home",
 });
 
 export async function getItemsAPI() {

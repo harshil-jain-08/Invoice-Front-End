@@ -29,6 +29,7 @@ const filledData = rest.get(
   "http://localhost:8080/Home/customers",
   (req, res, ctx) => {
     return res(ctx.json(Data));
+    console.log("coc");
   }
 );
 

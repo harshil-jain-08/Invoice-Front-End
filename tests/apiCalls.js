@@ -5,7 +5,7 @@ import {
 } from "./itemMockData";
 
 export const itemsGetBeforeCreateNewItem = (page) =>
-  page.route("https://metsys-invoice.netlify.app/Home/items", (route) => {
+  page.route("http://localhost:8081/Home/items", (route) => {
     route.fulfill({
       status: 200,
       body: JSON.stringify(itemsBeforeCreateNewItem),
