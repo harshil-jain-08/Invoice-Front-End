@@ -11,7 +11,7 @@ import {
   itemToAdd,
 } from "./itemMockData";
 
-const URLaddress = "http://localhost:3000";
+const URLaddress = "https://metsys-invoice.netlify.app/";
 
 test.describe("items test", () => {
   test("successful item post", async ({ page }) => {
