@@ -44,7 +44,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ 10451d42-a019-4129-a14b-67d494ec9d5b }}
