@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { SaveFill } from "react-bootstrap-icons";
+import { ExclamationCircle, SaveFill } from "react-bootstrap-icons";
 import { useNavigate } from "react-router-dom";
 import { addCustomerAPI } from "../../API";
 import "../form.css";
